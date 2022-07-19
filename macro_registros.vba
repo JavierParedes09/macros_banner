@@ -10,7 +10,7 @@ Sub EscribirRegistro()
     
     Incremento = 2
     Inc_Semestre = 1
-    Dim array_carreras(11) As String
+    Dim array_carreras(12) As String
     array_carreras(0) = "L3D"
     array_carreras(1) = "LN"
     array_carreras(2) = "LDMM"
@@ -22,8 +22,10 @@ Sub EscribirRegistro()
     array_carreras(8) = "LAD"
     array_carreras(9) = "LCF"
     array_carreras(10) = "LMK"
+    array_carreras(11) = "LD"
     
-    Dim array_codigos(11) As String
+    'Falta Codigo de carrera
+    Dim array_codigos(12) As String
     array_codigos(0) = "BFA3DGAMANIX"
     array_codigos(1) = "BSNUTRITIONX"
     array_codigos(2) = "BFAFASHDESGX"
@@ -35,12 +37,13 @@ Sub EscribirRegistro()
     array_codigos(8) = "BBAMGMTX"
     array_codigos(9) = "BBAFINANCEX"
     array_codigos(10) = "BBAMKTGX"
+    array_codigos(11) = ""
     Inc_Array = 0
     
     If generar.Cells(10, 3).Value = "" And generar.Cells(10, 4).Value = "" And generar.Cells(10, 5).Value = "" Then
         generar.Cells(11, 3).Value = "SELECCIONA LOS DATOS POR FAVOR!"
     Else
-        For i = 0 To 10
+        For i = 0 To 11
             For row1 = 2 To to_rows
                 For row2 = 2 To to_rows2
                     If a.Cells(row1, 3).Value = array_carreras(Inc_Array) + CStr(Inc_Semestre) Then
