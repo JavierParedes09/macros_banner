@@ -10,7 +10,7 @@ Sub EscribirRegistro()
     
     Incremento = 2
     Inc_Semestre = 1
-    Dim array_carreras(12) As String
+    Dim array_carreras(14) As String
     array_carreras(0) = "L3D"
     array_carreras(1) = "LN"
     array_carreras(2) = "LDMM"
@@ -47,9 +47,10 @@ Sub EscribirRegistro()
     If generar.Cells(10, 3).Value = "" And generar.Cells(10, 4).Value = "" And generar.Cells(10, 5).Value = "" Then
         generar.Cells(11, 3).Value = "SELECCIONA LOS DATOS POR FAVOR!"
     Else
+        'Cambiar valor?
         For i = 0 To 11
             For row1 = 2 To to_rows
-                For row2 = 2 To to_rows2
+                For row2 = 2 To to_rows2 'Faltaria agregar un case para separar cuatrimestrales de semestrales
                     If a.Cells(row1, 3).Value = array_carreras(Inc_Array) + CStr(Inc_Semestre) Then
                         If materias.Cells(row2, 3).Value = array_carreras(Inc_Array) + CStr(Inc_Semestre) Then
                             carga.Cells(Incremento, 1).Value = a.Cells(row1, 1)
