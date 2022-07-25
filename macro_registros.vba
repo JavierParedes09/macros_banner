@@ -23,9 +23,11 @@ Sub EscribirRegistro()
     array_carreras(9) = "LCF"
     array_carreras(10) = "LMK"
     array_carreras(11) = "LD"
+    array_carreras(12) = "MBA"
+    array_carreras(13) = "MED"
     
     'Falta Codigo de carrera
-    Dim array_codigos(12) As String
+    Dim array_codigos(14) As String
     array_codigos(0) = "BFA3DGAMANIX"
     array_codigos(1) = "BSNUTRITIONX"
     array_codigos(2) = "BFAFASHDESGX"
@@ -38,6 +40,8 @@ Sub EscribirRegistro()
     array_codigos(9) = "BBAFINANCEX"
     array_codigos(10) = "BBAMKTGX"
     array_codigos(11) = ""
+    array_codigos(12) = ""
+    array_codigos(13) = ""
     Inc_Array = 0
     
     If generar.Cells(10, 3).Value = "" And generar.Cells(10, 4).Value = "" And generar.Cells(10, 5).Value = "" Then
